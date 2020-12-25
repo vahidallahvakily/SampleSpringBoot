@@ -2,7 +2,7 @@ package ir.isc.software.fxa.nimaplus.bim.repository;
 
 
 import ir.isc.software.fxa.nimaplus.bim.common.CodingEntity;
-import ir.isc.software.fxa.nimaplus.bim.fixture.CodingEntityFixture;
+import ir.isc.software.fxa.nimaplus.bim.common.CodingEntityFixture;
 import ir.isc.software.fxa.nimaplus.bim.service.CodingService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

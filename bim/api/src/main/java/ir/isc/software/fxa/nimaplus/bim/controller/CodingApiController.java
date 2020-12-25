@@ -3,7 +3,8 @@ package ir.isc.software.fxa.nimaplus.bim.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import ir.isc.software.fxa.nimaplus.bim.common.CodingEntity;
-import ir.isc.software.fxa.nimaplus.bim.mapper.CodingMapper;
+import ir.isc.software.fxa.nimaplus.bim.dto.CodingDto;
+import ir.isc.software.fxa.nimaplus.bim.mapper.GenericMapper;
 import ir.isc.software.fxa.nimaplus.bim.service.CodingService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class CodingApiController {
 
     private final CodingService codingService;
 
-    private final CodingMapper codingMapper;
+    private final GenericMapper<CodingEntity, CodingDto> codingMapper;
 
     @GetMapping
     public ResponseEntity getCodings(){
@@ -36,6 +37,6 @@ public class CodingApiController {
         if(!codingEntity.isPresent())
             return ResponseEntity.notFound().build();
         else
-            return ResponseEntity.ok(codingMapper.convertDto(codingEntity.get()));
+            return ResponseEntity.ok(codingMapper.mapDto(codingEntity.get(),CodingDto.class));
     }
 }

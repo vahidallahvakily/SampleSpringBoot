@@ -15,9 +15,13 @@ public class NimaplusApplication {
 	// ------ 3-3 Rest Test / WireMock (Spring cloud contract)
 	// 4 - Logger -> Probbely log4j2 -> Use Lombok ***DONE***
 	// 5- Pageable plus filter
+	// ---- Good Article = https://blog.tratif.com/2017/11/23/effective-restful-search-api-in-spring/
+	// ---- Good Github project : https://github.com/nilestanner/spring-filter-sort-page-sample
 	// 6- PropertySource => PropertyConfig @ConfigurationProperties **DONE***
 	// ----- 6-1 Loader yaml -> have to activate @PropertySource doesn't load yaml
-	// 7 - Queue - ActiveMQ/ rabbit MQ
+	// 7 - Queue - rabbit MQ => Using amqp rather than jms
+	//        For Redis Pub/sub => We have library in Spring as spring-data-redis but redis doesn't support persistence
+	//------- For ActiveMQ / IBM WebMQ Sphere => Spring Boot JMS
 	// 8-  MicroMeter / Spring Boot Actuator / Prometheus / Grafana
 	// 9-  FlyWheel **DONE***
 	// 10- Swagger Api / Api Group - What tag of Swagger should we use ?
